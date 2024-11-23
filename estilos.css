@@ -1,0 +1,182 @@
+/* ======= Reset ======= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ======= Transición Suave ======= */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======= Fondo del blog ======= */
+body {
+    background: url('fondo-terror.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ======= Contenedor Principal ======= */
+#container {
+    background: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* ======= Encabezado ======= */
+header h1 {
+    background: #039ee6;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+    border-bottom: 5px solid #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ======= Navegación ======= */
+nav {
+    background: #000;
+    color: #fff;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 5px 10px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #039ee6;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* ======= Contenido Principal ======= */
+#contenido {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre los artículos */
+    margin-top: 20px;
+}
+
+.article {
+    flex: 1 1 calc(50% - 20px); /* Dos artículos por fila */
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    scroll-margin-top: 80px; /* Espaciado para el anclaje */
+}
+
+.article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article h2 {
+    color: #039ee6;
+    margin-bottom: 10px;
+}
+
+.article p {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Resaltar la sección activa */
+.article:target {
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 2px solid #039ee6;
+    padding: 18px;
+    transition: background-color 0.3s ease, border 0.3s ease;
+}
+
+/* ======= Aside (Categorías) ======= */
+aside {
+    background: #039ee6;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+}
+
+aside h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #fff;
+    text-align: center;
+}
+
+.categories {
+    list-style: none;
+    padding: 0;
+}
+
+.categories li {
+    margin: 10px 0;
+}
+
+.categories li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.categories li a:hover {
+    color: #ffcc00; /* Color dorado al pasar el ratón */
+}
+
+/* ======= Pie de Página ======= */
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+/* ======= Estilos Responsivos ======= */
+@media (max-width: 768px) {
+    #contenido {
+        flex-direction: column;
+    }
+
+    .article {
+        flex: 1 1 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
